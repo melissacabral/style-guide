@@ -1,0 +1,38 @@
+
+/*
+== Gradients
+*/
+
+$gradient_set : (
+	gradient-1: $gradient-1,
+	gradient-2: $gradient-2, 
+	gradient-3: $gradient-3, 
+	gradient-4: $gradient-4
+	);
+$gradient-labels: (
+	gradient-1: "Dark Teal + Aqua",
+	gradient-2: "Tangerine + Sunshine",
+	gradient-3: "Aqua + Lightened Aqua",
+	gradient-4: "Dark TEal + Lightened Teal" 
+	);
+
+@each $class , $gradient in $gradient_set{
+	.#{$class}{
+		@include gradient( 50deg, $gradient);
+		& + .label{
+			margin:$spacer 0;
+			line-height:1.4;			
+			&:before{
+				content:"#{$class}";
+				display: block;
+				font-weight: normal;
+				color:darken($neutral-color, 20);
+			}
+			&:after{
+				content: map.get($gradient-labels, #{$class});
+				display: block;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

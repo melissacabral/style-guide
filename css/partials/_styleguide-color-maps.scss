@@ -1,0 +1,75 @@
+
+// Color Variable Maps
+
+$colors: (
+	primary: $primary-color,
+	secondary: $secondary-color,
+	tertiary: $tertiary-color,
+	accent: $accent-color
+);
+
+$color-names: (
+	primary: $primary-color-name,
+	secondary: $secondary-color-name,
+	tertiary: $tertiary-color-name,
+	accent: $accent-color-name
+);
+
+
+// Use the variables from above and add them to the page
+
+// In this function, $color-type and $color-value are just pretty names that refer to
+// where those values are in the "map" above. $color-type refers to the stuff before
+// the colon and $color-value refers to the stuff after (which point back to other Sass
+// variables). $colors is the name of the map, though: we define a map elsewhere and then
+// call it here by using the same name.
+
+@each $color-type, $color-value in $colors {
+	// Get the RGB values
+	.color-#{$color-type} .label-rgb:before {
+		content: "#{red($color-value)} / #{green($color-value)} / #{blue($color-value)}";
+	}
+
+	// Get the HSL values and round them
+	.color-#{$color-type} .label-hsl:before {
+		content: "#{round(hue($color-value))} / #{round(saturation($color-value))} / #{round(lightness($color-value))}";
+	}
+	// Get the Hex values
+	.color-#{$color-type} .label-hex:before {
+		content: "#{$color-value}";
+	}
+
+	// Set the swatch color
+	.color-#{$color-type} .swatch {
+		background: $color-value;
+		@include text-contrast($color-value);
+	}
+
+	// Set the swatch color for the Light palette
+	.color-#{$color-type} .swatch-light {
+		background: lighten(saturate($color-value, $light-saturate-amount),
+			$lighten-amount	);
+		@include text-contrast(lighten(	saturate($color-value, $light-saturate-amount),
+			$lighten-amount));
+	}
+
+	// Set the swatch color for the Dark palette
+	.color-#{$color-type} .swatch-dark {
+		background: darken(	saturate($color-value, $dark-saturate-amount),
+			$darken-amount);
+		@include text-contrast(darken(saturate($color-value, $dark-saturate-amount),
+			$darken-amount));
+	}
+}
+
+@each $color-type, $color-name-value in $color-names {
+	// Get the color's name
+	.color-#{$color-type} .label-name:before {
+		content: "#{$color-name-value}";
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+
+

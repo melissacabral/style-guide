@@ -1,0 +1,24 @@
+/*
+== form feedback system 
+*/
+
+.feedback{
+	@include feedback-styles($warning-feedback-color);
+	padding:math.div($spacer,2) $spacer;
+	margin:1em 0;
+
+	&.error{
+		@include feedback-styles($negative-feedback-color);	
+	}
+	&.success{
+		@include feedback-styles($positive-feedback-color);	
+		
+	}
+}
+.field-error{
+	border-color:$negative-feedback-color;
+	background-color:lighten($negative-feedback-color, 40);
+}
+.no{
+	color:darken($negative-feedback-color, 30);
+}

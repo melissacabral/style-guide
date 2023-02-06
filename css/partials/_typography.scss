@@ -1,0 +1,87 @@
+/*
+== user selection
+*/
+::selection { background: lighten($secondary-color, 25); }
+
+
+.lede, .lead{
+	font-size: 130%;
+}
+/*
+== Headings
+*/
+
+h1 {
+	font-family: $accent-font-stack;
+	font-size: 5em;
+	padding:0;
+	margin:.5em 0 .4em ;
+	color: darken(
+		saturate($secondary-color, $dark-saturate-amount),
+		$darken-amount
+	);
+	line-height:1.1;
+}
+h2{
+	font-family: $accent-font-stack;
+	font-size: 2.5em;
+	line-height:1.2;
+}
+h1+h2{
+	margin-top:0;
+	padding-top:0;
+}
+
+h2,
+h6 {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+h3 {
+	color: darken($neutral-color, $darken-amount);
+	font-size: 1.8em;
+}
+
+h4 {
+	font-weight: bold;
+	color: $primary-color;
+	font-family: $accent-font-stack;
+
+}
+
+h5 {
+	font-weight: bold;
+}
+
+/*
+== Body Copy
+ */
+
+p, .card p {
+	margin:1em 0;
+	line-height: 1.5;
+}
+
+
+hr{
+	border:none;
+	border-bottom:1px solid lighten($neutral-color, 20);
+	margin: $spacer * 2 0;
+}
+/*
+== tables
+ */
+table.container{
+	table-layout: fixed;
+}
+th{
+	border-bottom: solid 2px $secondary-color;
+}
+.table-reset th{
+	border-bottom:none;
+}
+.table-columns{
+	border-spacing:$spacer 0;
+	border-collapse:separate;
+}

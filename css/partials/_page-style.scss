@@ -1,0 +1,125 @@
+/* 
+== Page Style
+*/
+
+body {
+	font-family: $primary-font-stack;
+	color: $text-color;
+}
+.container {
+	width: 100%;
+	max-width: 1024px;
+	padding: 0 $spacer;
+	margin: 0 auto;
+}
+
+.hero {
+	@include gradient(-45deg, $gradient-1 );
+	min-height: 64vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: $spacer;
+	text-align: center;
+	font-size:120%;
+}
+.primary{
+		background:$primary-color !important;
+		color:text-contrast($primary-color) !important;
+	}
+	.secondary{
+		background:$secondary-color !important;
+		color:text-contrast($secondary-color) !important;
+	}
+	.tertiary{
+		background:$tertiary-color !important;
+		color:text-contrast($tertiary-color) !important;
+	}
+	.accent{
+		background:$accent-color !important;
+		color:text-contrast($accent-color) !important;
+	}
+.hero h1 {
+	color: $text-color-inverse;	
+}
+.brand {
+	color: $text-color;
+	font-weight: 400;
+}
+
+.nav-dark{
+	background-color:$text-color;
+	color:$text-color-inverse;
+}
+.nav-dark .logo{
+	filter:invert(100%);
+}
+nav.nav-dark .burger~.menu{
+	background-color:$text-color;
+	color:$text-color-inverse;
+}
+/*
+== Utilities
+*/
+.reset{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.alignright{
+	float:right;
+	margin:0 0 $spacer $spacer;
+}
+.section, section{
+	padding:$spacer * 3 0;
+}
+.section-alternate {
+	background-color: darken($background-color, 2);
+	
+}
+.no-gap > * {
+	padding-left: 0;
+}
+.feedback{
+	border-left:solid math.div($spacer, 2) transparent;
+}
+.spacer{
+	padding:$spacer;
+}
+
+/*
+== duotones
+*/
+.duotone{
+	@include duotoneInline($secondary-color, $primary-color, 1.5, multiply);
+}
+
+/*
+== Misc Elements
+*/
+figure {
+	display: table;
+}
+
+.caption, figcaption{
+	background-color: darken($background-color, 3);
+	padding:math.div($spacer, 2);
+	@extend h4;
+}
+figcaption {
+	display: table-caption;
+	caption-side: bottom;
+}
+
+/*
+== Image Treatments
+ */
+.image-border{
+	border:solid math.div($spacer,2) rgba($neutral-color,.2);
+}
+.image-shadow{
+	box-shadow:2px  2px  6px rgba(black, .3);
+}
+.image-round{
+	border-radius:3000rem;
+}

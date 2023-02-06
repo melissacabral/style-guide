@@ -1,0 +1,12 @@
+// Get the font names
+// The quotes around the font names are there in case the font name has multiple words
+
+strong.primary-font:before,
+.type-specimen.primary-font .font-name:before {
+	content: "#{$primary-font}";
+}
+
+strong.accent-font:before,
+.type-specimen.accent-font .font-name:before {
+	content: "#{$accent-font}";
+}

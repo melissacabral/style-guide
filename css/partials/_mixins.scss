@@ -1,0 +1,171 @@
+// mixin that calculates if text needs to be light or dark
+// depending on the background color passed.
+// @see:  http://www.webmasterworld.com/r.cgi?f=88&d=9769&url=http://www.w3.org/TR/AERT#color-contrast
+      
+
+
+@function text-contrast($background) {
+  $r: red($background);
+  $g: green($background);
+  $b: blue($background);
+  
+  $yiq: (($r*299) + ($g*587) + ($b*114))/1000;
+  
+  @if ($yiq >= 128) {
+    @return black;
+  }
+  @else {
+    @return white
+  }
+}
+@mixin text-contrast($background) {
+  $r: red($background);
+  $g: green($background);
+  $b: blue($background);
+  
+  $yiq: (($r*299) + ($g*587) + ($b*114))/1000;
+  
+  @if ($yiq >= 128) {
+    color:black;
+  }
+  @else {
+   color :white
+  }
+}
+
+//================
+//tint and shade generator
+//================
+
+@function tint($color, $percentage) {
+    @return mix(#FFF, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(#000, $color, $percentage);
+}
+
+//================
+// Inline Image Duotone
+//================
+
+@mixin duotoneInline($highlight-color, $shadow-color, $contrast, $mix-blend-mode) {
+  background: $highlight-color;
+  position: relative;
+  padding:0 !important;
+
+  img {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  // Browsers that don't support mix-blend-mode get the main color as background color on parent's :before element, and img gets 50% opacity.
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    opacity: 0.1;
+  }
+
+  &:after {
+    background-color: $shadow-color;
+    opacity: 0.5;
+  }
+
+  img {
+    opacity: 0.5;
+  }
+
+  // Suports our duo tone properties
+  @supports (mix-blend-mode: $mix-blend-mode) {
+
+    &:before {
+      content: none;
+    }
+
+    img {
+      filter: grayscale(100%) contrast($contrast);
+      mix-blend-mode: $mix-blend-mode;
+      opacity: 1;
+    }
+  }
+}
+//================
+// Background image duotone
+//================
+
+@mixin duoToneBg($highlight-color, $shadow-color, $contrast, $mix-blend-mode) {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &::after {
+    background-color: $shadow-color;
+    opacity: 0.5;
+  }
+
+  &::before {
+    background-color: $highlight-color;
+  }
+
+  .duotone-bg-img {
+    overflow: hidden;
+    position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  @supports (mix-blend-mode: $mix-blend-mode) {
+    &::after {
+      content: none;
+    }
+
+    .duotone-bg-img {
+      filter: grayscale(100%) contrast($contrast);
+      mix-blend-mode: $mix-blend-mode;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+@mixin feedback-styles($color){
+  background-color:lighten($color, 30);
+  border-color:$color;
+  color: mix(text-contrast(lighten($color, 30)), $color, 60%);
+  & *{
+    color:inherit;
+  }
+}
+
+@mixin gradient($direction, $list) { 
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);  
+}

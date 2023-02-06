@@ -1,0 +1,29 @@
+/*
+==picnic recolors
+*/
+.dropimage, button, .button, [type=submit], [data-tooltip]:after{
+	background-color:$primary-color;
+}
+.success.dropimage, button.success, .success.button, .success[type=submit], .success.label, .success[data-tooltip]:after, .success{
+	background:$positive-feedback-color;
+}
+.error.dropimage, button.error, .error.button, .error[type=submit], .error.label, .error[data-tooltip]:after, .error{
+	background:$negative-feedback-color;
+}
+.warning.dropimage, button.warning, .warning.button, .warning[type=submit], .warning.label, .warning[data-tooltip]:after, .warning{
+	background:darken($warning-feedback-color, 15);	
+}
+th{
+background-color:transparent;
+color:inherit;
+}
+tr:nth-child(even){
+	background:transparent;
+}
+.zebra tr:nth-child(even){
+	background:rgba($neutral-color, .15);
+}
+input:focus, textarea:focus, .select select:focus{
+	border:1px solid $primary-color;
+	background-color:white;
+}

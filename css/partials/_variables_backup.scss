@@ -1,0 +1,66 @@
+//==========================
+// Main Typography Variables
+//==========================
+
+$primary-font: "Roboto";
+$accent-font: "Unbounded";
+
+// spacing size base
+$spacer: 1em;
+
+//==========================
+// Main Color Variables
+//==========================
+$neutral-color: #aaa;
+$text-color: #111;
+$text-color-inverse: #fff;
+$background-color: #fff;
+
+$primary-color: #334D5C;
+$primary-color-name: "Dark Teal";
+
+$secondary-color: #45B29D;
+$secondary-color-name: "Aqua";
+
+$tertiary-color: #E27A3F;
+$tertiary-color-name: "Tangerine";
+
+$accent-color: #EFC94C;
+$accent-color-name: "Sunshine";
+
+$positive-feedback-color: #45B29D;
+$negative-feedback-color:#DF5A49;
+$warning-feedback-color:#EFC94C;
+
+
+//==========================
+//gradients
+//==========================
+
+$gradient-1: ($primary-color, $secondary-color);
+$gradient-2: ($tertiary-color, $accent-color);
+$gradient-3: ($secondary-color, lighten($secondary-color, 20));
+$gradient-4: ($primary-color, lighten($primary-color, 20));
+
+//==========================
+// Font Stacks
+//==========================
+
+$primary-font-stack: "#{$primary-font}", "Helvetica Neue", Helvetica, Arial,
+	sans-serif;
+$accent-font-stack: "#{$accent-font}", serif;
+
+//==========================
+// Color Variation Amounts
+//==========================
+
+$lighten-amount: 10;
+$light-saturate-amount: 0;
+
+$darken-amount: 10;
+$dark-saturate-amount: 0;
+
+// How strong should the added color be in the Mixed Colors?
+// Closer to 0% = closer to original base color
+
+$mix-weight: 65%;
