@@ -817,6 +817,15 @@ button, [type=button], [type=reset], [type=submit], .button {
   background: #dbac14;
 }
 
+input:focus, textarea:focus, .select select:focus, [type=checkbox] + .checkable:hover:before, [type=radio] + .checkable:hover:before, [type=checkbox]:focus + .checkable:before, [type=radio]:focus + .checkable:before {
+  border: solid 1px #334D5C;
+}
+
+select:focus, select:active {
+  border: solid 1px #334D5C;
+  outline: none;
+}
+
 th {
   background-color: transparent;
   color: inherit;

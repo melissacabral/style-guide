@@ -13,9 +13,16 @@
 .warning.dropimage, button.warning, .warning.button, .warning[type=submit], .warning.label, .warning[data-tooltip]:after, .warning{
 	background:darken($warning-feedback-color, 15);	
 }
+input:focus, textarea:focus, .select select:focus, [type=checkbox]+.checkable:hover:before, [type=radio]+.checkable:hover:before, [type=checkbox]:focus+.checkable:before, [type=radio]:focus+.checkable:before{
+	border:solid 1px $primary-color;
+}
+select:focus, select:active{
+	border:solid 1px $primary-color;
+	outline: none;
+}
 th{
-background-color:transparent;
-color:inherit;
+	background-color:transparent;
+	color:inherit;
 }
 tr:nth-child(even){
 	background:transparent;
