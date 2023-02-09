@@ -368,6 +368,7 @@ strong.accent-font:before,
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
+  overflow-x: hidden;
 }
 
 .container {
@@ -513,6 +514,11 @@ nav.nav-dark .burger ~ .menu {
 /*
 == Misc Elements
 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 figure {
   display: table;
 }
@@ -649,7 +655,7 @@ figcaption {
 */
 h1 {
   font-family: "Unbounded", serif;
-  font-size: 5em;
+  font-size: 3em;
   padding: 0;
   margin: 0.5em 0 0.4em;
   color: #378d7d;
@@ -658,7 +664,7 @@ h1 {
 
 h2 {
   font-family: "Unbounded", serif;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1.2;
 }
 
@@ -675,7 +681,7 @@ h6 {
 
 h3 {
   color: #919191;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 h4, .caption, figcaption {
@@ -688,6 +694,19 @@ h5 {
   font-weight: bold;
 }
 
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+}
 /*
 == Body Copy
  */
