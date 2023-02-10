@@ -1,15 +1,11 @@
-// mixin that calculates if text needs to be light or dark
-// depending on the background color passed.
+// calculate if text needs to be light or dark depending on the background color passed.
 // @see:  http://www.webmasterworld.com/r.cgi?f=88&d=9769&url=http://www.w3.org/TR/AERT#color-contrast
-      
-
-
 @function text-contrast($background) {
   $r: red($background);
   $g: green($background);
   $b: blue($background);
   
-  $yiq: (($r*299) + ($g*587) + ($b*114))/1000;
+  $yiq: math.div((($r*299) + ($g*587) + ($b*114)), 1000);
   
   @if ($yiq >= 128) {
     @return black;
@@ -19,18 +15,7 @@
   }
 }
 @mixin text-contrast($background) {
-  $r: red($background);
-  $g: green($background);
-  $b: blue($background);
-  
-  $yiq: (($r*299) + ($g*587) + ($b*114))/1000;
-  
-  @if ($yiq >= 128) {
-    color:black;
-  }
-  @else {
-   color :white
-  }
+  color: text-contrast($background);
 }
 
 //================
