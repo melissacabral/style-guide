@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Style Guide Template</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/picnic/7.1.0/picnic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styleguide.css">
+</head>
+<body>
+	<nav class="nav nav-dark">
+		<a href="#" class="brand">
+			<img src="images/logo.svg" class="logo">
+			<span>Brand Name</span>
+		</a>
+		<!-- top menu -->
+		<input id="main-menu" type="checkbox" class="show">
+		<label for="main-menu" class="burger pseudo button">&#9776;</label>
+		<div class="menu">
+			<a href="test-page.html" class="pseudo button">Test Page</a>
+			<a href="style-guide.html" class=" button">Style Guide</a>
+		</div>
+	</nav>
+	<div class="hero gradient-1">
+		<h1>
+			<span class="brand">AppName</span>
+			Style Guide
+		</h1>
+	</div>
+	<!-- Colors -->
+	<section class="colors">
+		<div class="container">
+			<h1>Colors</h1>
+			<p>These are the colors that are used to distinguish our brand <span class="highlighter">Click on any swatch to copy the hex code to your clipboard.</span></p>
+			<h2>Brand Colors</h2>
+			<div class="flex one two-500 four-800">
+				<div class="color color-primary">
+					<div class="swatch"></div>
+					<div class="flex four">
+						<div class="fourth">
+							<p class="label">&nbsp;</p>
+							<p class="label">RGB:</p>
+							<p class="label">HSL:</p>
+							<p class="label">Hex:</p>
+						</div>
+						<div class="three-fourth">
+							<p class="label label-color label-name"></p>
+							<p class="label label-color label-rgb"></p>
+							<p class="label label-color label-hsl"></p>
+							<p class="label label-color label-hex"></p>
+						</div>
+					</div>
+				</div>
+				<div class="color color-secondary">
+					<div class="swatch"></div>
+					<div class="flex four">
+						<div class="fourth">
+							<p class="label">&nbsp;</p>
+							<p class="label">RGB:</p>
+							<p class="label">HSL:</p>
+							<p class="label">Hex:</p>
+						</div>
+						<div class="three-fourth">
+							<p class="label label-color label-name"></p>
+							<p class="label label-color label-rgb"></p>
+							<p class="label label-color label-hsl"></p>
+							<p class="label label-color label-hex"></p>
+						</div>
+					</div>
+				</div>
+				<div class="color color-tertiary">
+					<div class="swatch"></div>
+					<div class="flex four">
+						<div class="fourth">
+							<p class="label">&nbsp;</p>
+							<p class="label">RGB:</p>
+							<p class="label">HSL:</p>
+							<p class="label">Hex:</p>
+						</div>
+						<div class="three-fourth">
+							<p class="label label-color label-name"></p>
+							<p class="label label-color label-rgb"></p>
+							<p class="label label-color label-hsl"></p>
+							<p class="label label-color label-hex"></p>
+						</div>
+					</div>
+				</div>
+				<div class="color color-accent">
+					<div class="swatch"></div>
+					<div class="flex four">
+						<div class="fourth">
+							<p class="label">&nbsp;</p>
+							<p class="label">RGB:</p>
+							<p class="label">HSL:</p>
+							<p class="label">Hex:</p>
+						</div>
+						<div class="three-fourth">
+							<p class="label label-color label-name"></p>
+							<p class="label label-color label-rgb"></p>
+							<p class="label label-color label-hsl"></p>
+							<p class="label label-color label-hex"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>Utility Colors</h2>
+			<div class="utility-colors flex one two-500 three-600">
+				<div class="color color-positive">
+					<h3>Positive Feedback</h3>
+					<div class="swatch"></div>
+					<p class="note">Use for success feedback messages, rarely use with positive primary actions</p>
+
+					
+					<div class="feedback success">Success!</div>
+					<a class="button success">Save</a>
+				</div>
+				<div class="color color-negative">
+					<h3>Negative Feedback</h3>
+					<div class="swatch"></div>
+					<p class="note">Use for error feedback messages and actions with permanent consequences.</p>
+
+					
+					<div class="feedback error">Oops, something went wrong.</div>
+					<a class="button error">Delete</a>
+				</div>
+				<div class="color color-warning">
+					<h3>Warning Feedback</h3>
+					<div class="swatch"></div>
+					<p class="note">Use for feedback messages, not intended for buttons.</p>
+
+					
+					<div class="feedback">For your Information</div>
+					<a class="button warning">Warning</a>
+				</div>
+			</div>
+			<h2>Tints & Shades</h2>
+			<p class="lead">
+				These colors are lighter and darker variations of our main brand
+				colors. These are especially helpful for hover states, illustrations,
+				and other small variations.
+			</p>
+			<div class="flex one two-600">
+				<div class="color-variations color-primary">
+					<div class="flex three no-gap">
+						<div>
+							<div class="swatch swatch-light"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-base"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-dark"></div>
+						</div>
+					</div>
+				</div>
+				<div class="color-variations color-secondary">
+					<div class="flex three no-gap">
+						<div>
+							<div class="swatch swatch-light"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-base"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-dark"></div>
+						</div>
+					</div>
+				</div>
+				<div class="color-variations color-tertiary">
+					<div class="flex three no-gap">
+						<div>
+							<div class="swatch swatch-light"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-base"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-dark"></div>
+						</div>
+					</div>
+				</div>
+				<div class="color-variations color-accent">
+					<div class="flex three no-gap">
+						<div>
+							<div class="swatch swatch-light"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-base"></div>
+						</div>
+						<div>
+							<div class="swatch swatch-dark"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h3 class="title">Neutral Base Tints and Shades</h3>
+			<p>These tints are based off of a neutral color that supports our Brand colors. Use them for background-colors, where a little more depth is needed. They are subtle, so don't rely on them to visually distinguish separate elements. You can see them used as the alternating backgrounds on this style guide!</p>
+			<h4>Light Mode</h4>
+			<ul class="neutral flex reset">
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+				<li class="swatch swatch--tint"></li>
+			</ul>
+			<h4>Dark Mode</h4>
+			<ul class="neutral flex reset">
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+				<li class="swatch swatch--shade"></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- Gradients -->
+	<section class="gradients">
+		<div class="container">
+			<h1>Gradients</h1>
+			<p>Gradients are useful as hero backgrounds</p>
+			<div class="flex one two-600">
+				<div class="gradient">
+					<div class="preview gradient-1"></div>
+					<h3 class="label"></h3>
+				</div>
+				<div class="gradient">
+					<div class="preview gradient-2"></div>
+					<h3 class="label"></h3>
+				</div>
+				<div class="gradient">
+					<div class="preview gradient-3"></div>
+					<h3 class="label"></h3>
+				</div>
+				<div class="gradient">
+					<div class="preview gradient-4"></div>
+					<h3 class="label"></h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Duotones -->
+	<section class="duotones section-alternate">
+		<div class="container">
+			<h1>Duotones</h1>
+			<div class="flex two-600">
+				<div class="duotone">
+					<img src="https://picsum.photos/id/0/600/500">
+				</div>
+				<div class="spacer">
+					<h2>Accent Image</h2>
+					<p>Images can be treated as a duotone using the primary color and secondary color only. </p>
+				</div>
+			</div>
+			<div class="flex two-600">
+				<div class="spacer">
+					<h2>Dramatic Effect</h2>
+					<p>The original image needs to have enough contrast to show the highlight and shadow clearly </p>
+				</div>
+				<div class="duotone">
+					<img src="https://picsum.photos/id/1024/600/500">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Images -->
+	<section class="images ">
+		<div class="container">
+			<h1>Image Treatments</h1>
+			<div class="flex two-600">
+				<div>
+					<h3>Round</h3>
+					<img class="image-round" src="https://picsum.photos/id/10/300/300">
+				</div>
+				<div>
+					<h3>Border</h3>
+					<img class="image-border" src="https://picsum.photos/id/141/400/300">
+				</div>
+				
+				<div>
+					<h3>Shadow</h3>
+					<img class="image-shadow" src="https://picsum.photos/id/1023/400/300">
+				</div>
+				
+				<div>
+					<h3>Round + Border + Shadow</h3>
+					<img class="image-shadow image-border image-round" src="https://picsum.photos/id/13/300/300">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Typography -->
+	<section class="typography section-alternate">
+		<div class="container">
+			<h1 id="typography">Typography</h1>
+			<p class="lead">
+				<strong class="primary-font"></strong> is used as our primary typeface and
+				<strong class="accent-font"></strong> is used as an accent for headings
+				and other special purposes.
+			</p>
+			<hr>
+			<div class="type-specimen primary-font">
+				<div class="font-name"></div>
+				<span>Aa</span>
+				<span>Bb</span>
+				<span>Cc</span>
+				<span>Dd</span>
+				<span>012345679</span>
+			</div>
+			<hr>
+			<div class="type-specimen accent-font">
+				<div class="font-name"></div>
+				<span>Aa</span>
+				<span>Bb</span>
+				<span>Cc</span>
+				<span>Dd</span>
+				<span>012345679</span>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			
+
+
+			<h2>Heading Samples</h2>
+			<div class="heading-samples">
+				<div class="flex five">
+					<div class="fifth">
+						<p>H1</p>
+					</div>
+					<div class="four-fifth">
+						<h1>The quick brown fox jumps over a lazy dog</h1>
+					</div>
+				</div>
+				<div class="flex five">
+					<div class="fifth">
+						<p>H2</p>
+					</div>
+					<div class="four-fifth">
+						<h2>Amazingly few discotheques provide jukeboxes</h2>
+					</div>
+				</div>
+				<div class="flex five">
+					<div class="fifth">
+						<p>H3</p>
+					</div>
+					<div class="four-fifth">
+						<h3>A wizard’s job is to vex chumps quickly in fog</h3>
+					</div>
+				</div>
+				<div class="flex five">
+					<div class="fifth">
+						<p>H4</p>
+					</div>
+					<div class="four-fifth">
+						<h4>Bright vixens jump; dozy fowl quack</h4>
+					</div>
+				</div>
+				<div class="flex five">
+					<div class="fifth">
+						<p>Lede</p>
+					</div>
+					<div class="four-fifth">
+						<p class="lede">By Jove, my quick study of lexicography won a prize! Painful zombies quickly watch a jinxed graveyard. Grumpy wizards make a toxic brew for the jovial queen. A quick movement of the enemy will jeopardize six gunboats. Jackie will budget for the most expensive zoology equipment. Jim quickly realized that the beautiful gowns are expensive, then a cop quizzed Mick Jagger’s ex-wives briefly.</p>
+					</div>
+				</div>
+				<div class="flex five">
+					<div class="fifth">
+						<p>Paragraph</p>
+					</div>
+					<div class="four-fifth">
+						<p>By Jove, my quick study of lexicography won a prize! Painful zombies quickly watch a jinxed graveyard. Grumpy wizards make a toxic brew for the jovial queen. A quick movement of the enemy will jeopardize six gunboats. Jackie will budget for the most expensive zoology equipment. Jim quickly realized that the beautiful gowns are expensive, then a cop quizzed Mick Jagger’s ex-wives briefly.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<script type="text/javascript">
+	//click to copy bg of any swatch
+	const swatches = document.getElementsByClassName('swatch');
+	for( el of swatches) {
+		el.addEventListener('click', function(e){
+			for (elem of document.getElementsByClassName("copied")) {
+				elem.classList.remove("copied");
+			}
+			let compStyle = window.getComputedStyle(e.target);
+			let bgColor = convert(compStyle.getPropertyValue("background-color"));
+			copyText(bgColor);
+			e.target.classList.add('copied');
+		}, false);
+	};
+	function convert(rgb) {
+		rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+		function hexCode(i) {
+			return ("0" + parseInt(i).toString(16)).slice(-2);
+		}
+		return  hexCode(rgb[1]) + hexCode(rgb[2])
+		+ hexCode(rgb[3]);
+	}
+	//If you only want to put some Text in the Clipboard just use this function
+	// and pass the string to copied as the argument.
+	function copyText(text) {
+		navigator.clipboard.writeText(text);
+	}
+	</script>
+</body>
+</html>
