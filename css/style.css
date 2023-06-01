@@ -27,6 +27,8 @@ body {
   padding: 1em;
   text-align: center;
   font-size: 120%;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .primary {

@@ -23,6 +23,8 @@ body {
 	padding: $spacer;
 	text-align: center;
 	font-size:120%;
+	flex-direction: column;
+  justify-content: center;
 }
 .primary{
 		background:$primary-color !important;
